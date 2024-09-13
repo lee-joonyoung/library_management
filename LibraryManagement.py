@@ -22,6 +22,13 @@ class LibraryManagement:
         print("도서 목록:")
         for book in self.books:
             print(f'{book.title} ({book.author}, 출판년도: {book.pub_year})')
+ 
+    def rent_book(self, isbn, name):
+        new_rental = {self.books.isbn: self.name}
+        self.rentals.append(new_rental)
 
+    def return_book(self, isbn, name):
+        if self.isbn in self.rentals:
+            print("반납완료")
 
 library = LibraryManagement()

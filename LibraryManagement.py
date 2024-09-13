@@ -24,8 +24,11 @@ class LibraryManagement:
             print(f'{book.title} ({book.author}, 출판년도: {book.pub_year})')
  
     def rent_book(self, isbn, name):
-        new_rental = {self.books.isbn: self.name}
-        self.rentals.append(new_rental)
+        for book in self.books:
+            if book.isbn == isbn:
+                new_rental = {book, name}
+                self.rentals.append(new_rental)
+                print(f'{name}님이 {book}을(를) 대여하셨습니다.')
 
     def return_book(self, isbn, name):
         if self.isbn in self.rentals:

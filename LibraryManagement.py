@@ -1,3 +1,7 @@
+from Members import Members
+from Books import Books
+from Rentals import Rentals
+
 class LibraryManagement:
 
     def __init__(self, library_name = "my_library"):

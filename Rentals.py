@@ -5,7 +5,8 @@ class Rentals:
         self.name = name
 
     def rent_book(self, book, name):
-        pass
+        new_rental = {"book" = book, "name" = name}
+        self.library_management.rentals.append(new_rental)
 
     def return_book(self, book, name):
         pass

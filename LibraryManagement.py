@@ -20,4 +20,4 @@ class LibraryManagement:
             print(f'{book.title} ({book.author}, 출판년도: {book.pub_year})')
 
 
-    
+library = LibraryManagement()
